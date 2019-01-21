@@ -10,8 +10,23 @@ class App extends Component {
         {id: 2, nama: 'Keanu Reeves', kelas: '8B'},
         {id: 3, nama: 'Dian Sastro', kelas: '3C'},
       ],
-      judul : 'Hello World!!'
+      judul : 'Hello World !'
     }
+  }
+
+  // Ketika method render berhasil dijalankan
+  componentDidMount() {
+    // alert('Render sudah berhasil jalan')
+  }
+
+  // Ketika ada perubahan state atau props
+  componentDidUpdate() {
+    // alert('ada perubahan di state judul')
+  }
+
+  // Ketika component akan di hapus / di tiadakan
+  componentWillUnmount() {
+
   }
 
   render() {
@@ -22,6 +37,7 @@ class App extends Component {
           siswa = { this.state.siswa } 
           judulBaru = {this.state.judul }
         />
+        <button onClick = {() => this.setState({ judul : this.state.judul + '!' })}>Click ME!</button>
       </div>
     )
   }
